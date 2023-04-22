@@ -1,10 +1,4 @@
 /*
- * Swarthmore College, CS 31
- * Copyright (c) 2023 Swarthmore College Computer Science Department,
- * Swarthmore PA
- */
-
-/*
  * To run:
  * ./gol file1.txt  0  # run with config file file1.txt, do not print board
  * ./gol file1.txt  1  # run with config file file1.txt, ascii animation
