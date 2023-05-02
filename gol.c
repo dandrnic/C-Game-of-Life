@@ -84,7 +84,7 @@ int setup_animation(struct gol_data* data);
 /* register animation with ParaVisi library (DO NOT MODIFY) */
 int connect_animation(void (*applfunc)(struct gol_data *data),
         struct gol_data* data);
-/* name for visi (you may change the string value if you'd like) */
+/* name for visi */
 static char visi_name[] = "GOL!";
 
 
@@ -277,17 +277,6 @@ int init_game_data_from_args(struct gol_data *data, char **argv) {
  *         all GOL game playing state
  */
 void play_gol(struct gol_data *data) {
-
-    //  at the end of each round of GOL, determine if there is an
-    //  animation step to take based on the output_mode,
-    //   if ascii animation:
-    //     (a) call system("clear") to clear previous world state from terminal
-    //     (b) call print_board function to print current world state
-    //     (c) call usleep(SLEEP_USECS) to slow down the animation
-    //   if ParaVis animation:
-    //     (a) call your function to update the color3 buffer
-    //     (b) call draw_ready(data->handle)
-    //     (c) call usleep(SLEEP_USECS) to slow down the animation
 
     int round;
     for (int i = 0; i < data->iters; i++) {
